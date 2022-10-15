@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <span class="first">
+            <img src="/images/icon-menu.svg" alt="menu" class="mobile icon-menu">
+            <img src="/images/logo.svg" alt="logo" class="logo">
+        </span>
+        <nav class="desktop desktop-nav">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contacts</a>
+        </nav>
+        <span class="second">
+            <img src="/images/icon-cart.svg" alt="icon-cart" class="icon-cart">
+            <img src="/images/image-avatar.png" alt="image-avatar" class="avatar">
+        </span>
+    </header>
+
+    <main>
+        <div class="sneaker-preview">
+            <img src="/images/image-product-1.jpg" alt="sneakers" class="current-sneaker-preview"> <!--current sneaker preview-->
+            <img src="/images/icon-previous.svg" alt="previous" class="mobile slide previous">
+            <img src="/images/icon-next.svg" alt="next" class="mobile   slide next">
+            <!--thumbnails-->
+            <img src="/images/image-product-1-thumbnail.jpg" alt="sneakers" class="desktop thumbnails"> 
+            <img src="/images/image-product-2-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
+            <img src="/images/image-product-3-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
+            <img src="/images/image-product-4-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
+        </div>
+
+        <div class="details"> <!--description, price and order-->
+            <section class="description-section"> <!--description section-->  
+                <h1>SNEAKER COMPANY</h1> 
+                <h2>Fall Limited Edition <br> Sneakers</h2>
+                <p>These low-profile sneakers are your perfect <br class="mobile"> casual wear <br class="desktop"> companion. Featuring a durable <br class="mobile"> rubber outer sole, they’ll <br class="desktop"> withstand everything <br class="mobile"> the weather can offer.</p>
+            </section>
+            <section class="price-section"> <!--price section and add to cart-->
+                <span class="new-price">$125.00</span>
+                <span class="discount-percentage">50%</span>
+                <span class="old-price">$250.00</span>
+            </section>
+            <section class="add-to-cart-section">  
+                <div class="number-added-to-cart"> <!--number of sneakers added to cart-->            
+                    <img src="/images/icon-minus.svg" alt="icon-minus">
+                    <span>0</span>
+                    <img src="/images/icon-plus.svg" alt="icon-plus">
+                </div>
+                <button class="add-to-cart">
+                    <img src="/images/icon-cart copy.svg" alt="icon-cart">
+                    <span>Add to cart</span>
+                </button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

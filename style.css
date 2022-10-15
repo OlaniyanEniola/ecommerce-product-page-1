@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    padding: 4.5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon-menu {
+    width: 8.5%;
+    margin-right: 2.5vw;
+}
+.logo {
+    width: 72%;
+}
+.second {
+    display: flex;
+    justify-content: end;
+}
+.icon-cart, .avatar {
+    width: 16%;
+    margin-inline: 8%;
+}
+.sneaker-preview {
+    width: 100%;
+    position: relative;
+}    
+.current-sneaker-preview {
+    width: 100%;
+    object-fit: cover;
+}
+.slide {
+    position: absolute;
+    top: 50%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 3.3%;
+    width: 10.4%;
+    height: 12%;
+    border-radius: 100%;
+}
+.previous {
+    left: 5%;
+}
+.next {
+    right: 5%;
+}
+.details {
+    padding: 6% 0;
+}
+.description-section h1 {
+    font-size: 0.8rem;
+    color: hsl(26, 100%, 55%);
+    letter-spacing: 0.1em;
+}
+.description-section h2 {
+    font-size: 1.7em;
+    color: hsl(220, 13%, 13%);
+    margin-block: 0.8rem;
+}
+.description-section p {
+    color: hsl(219, 9%, 45%);
+    line-height: 1.2em;
+}
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1em;
+    position: relative;
+}
+.new-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.discount-percentage {
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 0.3em;
+    color: hsl(26, 100%, 55%);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.6% 2%;
+    position: absolute;
+    left: 32%;
+}
+.old-price {
+    color: hsl(220, 14%, 75%);
+    font-weight: 600;
+    text-decoration: line-through;
+}
+.number-added-to-cart {
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 0.6em;
+    font-weight: 700;
+    margin: 4% 0;
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.add-to-cart {
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 0.6em;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 5% 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.add-to-cart img {
+    width: 14%;
+    margin-bottom: 0.1em;
+}
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 950px) {
+    .desktop {
+        display: none;
+    }
+    body {
+        min-width: 350px;
+        max-width: 25rem;
+        margin: 0 auto;
+        box-shadow: 1px 1px 4px 1px hsl(0, 0%, 92%) inset;
+    }
+    .current-sneaker-preview {
+        height: clamp(18rem, 42vh, 20rem);
+    }
+}
+@media screen and (min-width: 951px) {
+    .mobile {
+        display: none;
+    }
+    body {
+        padding: 1vw 12vw;
+    }
+    header {
+        padding: 0 0 2vw 0;
+        justify-content: space-between;
+        border-bottom: 0.1vh solid hsl(219, 9%, 45%);
+    }
+    .logo {
+        width: clamp(6rem, 11vw, 8rem);
+    }
+    .desktop-nav {
+        display: flex;
+        margin-left: -34vw;
+    }
+    .desktop-nav a {
+        color: hsl(219, 9%, 45%);
+        font-size: clamp(0.7rem, 1.25vw, 0.9rem);
+        /* padding-inline: 1vw; */
+        /* padding-inline: clamp(0.3rem, 0.5vw, 1rem); */
+        padding-inline: min(1rem, 5%);
+        text-decoration: none;
+    }
+    .second {
+        align-items: center;
+    }
+    .icon-cart, .avatar {
+        margin-inline: 20%;
+    }
+    .icon-cart {
+        width: 2vw;
+    }
+    .avatar {
+        width: clamp(2.5rem, 4vw, 3.5rem);
+    }
+    main {
+        flex-direction: row;
+    }
+    .sneaker-preview {
+    }
+    .details {
+    }
+}
