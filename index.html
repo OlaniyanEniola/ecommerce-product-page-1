@@ -9,18 +9,20 @@
 </head>
 <body>
     <header>
-        <span class="first">
+        <span >
             <img src="/images/icon-menu.svg" alt="menu" class="mobile icon-menu">
             <img src="/images/logo.svg" alt="logo" class="logo">
         </span>
         <nav class="desktop desktop-nav">
-            <a href="#">Collections</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">About</a>
-            <a href="#">Contacts</a>
+            <ul>
+                <a href="#">Collections</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">About</a>
+                <a href="#">Contacts</a>
+            </ul>
         </nav>
-        <span class="second">
+        <span>
             <img src="/images/icon-cart.svg" alt="icon-cart" class="icon-cart">
             <img src="/images/image-avatar.png" alt="image-avatar" class="avatar">
         </span>
@@ -28,14 +30,18 @@
 
     <main>
         <div class="sneaker-preview">
-            <img src="/images/image-product-1.jpg" alt="sneakers" class="current-sneaker-preview"> <!--current sneaker preview-->
-            <img src="/images/icon-previous.svg" alt="previous" class="mobile slide previous">
-            <img src="/images/icon-next.svg" alt="next" class="mobile   slide next">
+            <div>
+                <img src="/images/image-product-1.jpg" alt="sneakers" class="current-sneaker-preview"> <!--current sneaker preview-->
+                <img src="/images/icon-previous.svg" alt="previous" class="mobile slide previous">
+                <img src="/images/icon-next.svg" alt="next" class="mobile   slide next">
+            </div>
             <!--thumbnails-->
-            <img src="/images/image-product-1-thumbnail.jpg" alt="sneakers" class="desktop thumbnails"> 
-            <img src="/images/image-product-2-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
-            <img src="/images/image-product-3-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
-            <img src="/images/image-product-4-thumbnail.jpg" alt="sneakers" class="desktop thumbnails">
+            <div class="thumbnails">
+                <img src="/images/image-product-1-thumbnail.jpg" alt="sneakers" class="desktop thumbnail"> 
+                <img src="/images/image-product-2-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
+                <img src="/images/image-product-3-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
+                <img src="/images/image-product-4-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
+            </div>
         </div>
 
         <div class="details"> <!--description, price and order-->
@@ -51,9 +57,9 @@
             </section>
             <section class="add-to-cart-section">  
                 <div class="number-added-to-cart"> <!--number of sneakers added to cart-->            
-                    <img src="/images/icon-minus.svg" alt="icon-minus">
+                    <img src="/images/icon-minus.svg" alt="icon-minus" class="icon-minus">
                     <span>0</span>
-                    <img src="/images/icon-plus.svg" alt="icon-plus">
+                    <img src="/images/icon-plus.svg" alt="icon-plus" class="icon-plus">
                 </div>
                 <button class="add-to-cart">
                     <img src="/images/icon-cart copy.svg" alt="icon-cart">
