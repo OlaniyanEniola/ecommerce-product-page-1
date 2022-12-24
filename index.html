@@ -7,9 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <span >
+        <span>
             <img src="/images/icon-menu.svg" alt="menu" class="mobile icon-menu">
             <img src="/images/logo.svg" alt="logo" class="logo">
         </span>
@@ -29,15 +30,26 @@
     </header>
 
     <main>
-        <div class="sneaker-preview">
-            <div>
-                <img src="/images/image-product-1.jpg" alt="sneakers" class="current-sneaker-preview"> <!--current sneaker preview-->
-                <img src="/images/icon-previous.svg" alt="previous" class="mobile slide previous">
-                <img src="/images/icon-next.svg" alt="next" class="mobile   slide next">
+        <div class="carousel">
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide"><img src="/images/image-product-1.jpg" alt="sneakers" class="carousel__image"></li>
+                    <li class="carousel__slide"><img src="/images/image-product-2.jpg" alt="sneakers" class="carousel__image"></li>
+                    <li class="carousel__slide"><img src="/images/image-product-3.jpg" alt="sneakers" class="carousel__image"></li>
+                    <li class="carousel__slide"><img src="/images/image-product-4.jpg" alt="sneakers" class="carousel__image"></li>
+                </ul>
+                <!--PREVIOUS BUTTON-->
+                <button  class="mobile carousel__button carousel__button--previous">
+                    <img src="/images/icon-previous.svg" alt="previous">
+                </button>
+                <!--NEXT BUTTON-->
+                <button class="mobile carousel__button carousel__button--next">
+                    <img src="/images/icon-next.svg" alt="next">
+                </button>
             </div>
             <!--thumbnails-->
             <div class="thumbnails">
-                <img src="/images/image-product-1-thumbnail.jpg" alt="sneakers" class="desktop thumbnail"> 
+                <img src="/images/image-product-1-thumbnail.jpg" alt="sneakers" class="desktop thumbnail current-slide">
                 <img src="/images/image-product-2-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
                 <img src="/images/image-product-3-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
                 <img src="/images/image-product-4-thumbnail.jpg" alt="sneakers" class="desktop thumbnail">
@@ -45,18 +57,20 @@
         </div>
 
         <div class="details"> <!--description, price and order-->
-            <section class="description-section"> <!--description section-->  
-                <h1>SNEAKER COMPANY</h1> 
+            <section class="description-section"> <!--description section-->
+                <h1>SNEAKER COMPANY</h1>
                 <h2>Fall Limited Edition <br> Sneakers</h2>
-                <p>These low-profile sneakers are your perfect <br class="mobile"> casual wear <br class="desktop"> companion. Featuring a durable <br class="mobile"> rubber outer sole, they’ll <br class="desktop"> withstand everything <br class="mobile"> the weather can offer.</p>
+                <p>These low-profile sneakers are your perfect <br class="mobile"> casual wear <br class="desktop">
+                    companion. Featuring a durable <br class="mobile"> rubber outer sole, they’ll <br class="desktop">
+                    withstand everything <br class="mobile"> the weather can offer.</p>
             </section>
             <section class="price-section"> <!--price section and add to cart-->
                 <span class="new-price">$125.00</span>
                 <span class="discount-percentage">50%</span>
                 <span class="old-price">$250.00</span>
             </section>
-            <section class="add-to-cart-section">  
-                <div class="number-added-to-cart"> <!--number of sneakers added to cart-->            
+            <section class="add-to-cart-section">
+                <div class="number-added-to-cart"> <!--number of sneakers added to cart-->
                     <img src="/images/icon-minus.svg" alt="icon-minus" class="icon-minus">
                     <span>0</span>
                     <img src="/images/icon-plus.svg" alt="icon-plus" class="icon-plus">
@@ -68,5 +82,7 @@
             </section>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
+
 </html>

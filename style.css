@@ -12,6 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 90vh;
 }
 header {
     padding: 4.5%;
@@ -34,27 +35,54 @@ header span:last-child {
     width: 16%;
     margin-inline: 8%;
 }
-.sneaker-preview {
+.carousel {
     width: 100%;
+    height: 100%;
     position: relative;
 }    
-.current-sneaker-preview {
+.carousel__track-container {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    overflow: hidden;
 }
-.slide {
+.carousel__track {
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform ease 0.2s;
+}
+.carousel__slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.thumbnails .current-slide {
+    opacity: 0.5;
+}
+.carousel__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carousel__button {
+    background-color: hsl(0, 0%, 100%);
     position: absolute;
     top: 50%;
-    background-color: hsl(0, 0%, 100%);
-    padding: 3.3%;
-    width: 10.4%;
-    height: 12%;
-    border-radius: 100%;
+    transform: translateY(-50%);
+    padding: 3.5%;
+    width: 10%;
+    height: 16%;
+    border: none;
+    border-radius: 50%;
 }
-.previous {
+.carousel__button img {
+    width: 80%;
+}
+.carousel__button--previous {
     left: 5%;
 }
-.next {
+.carousel__button--next {
     right: 5%;
 }
 .details {
@@ -137,7 +165,7 @@ header span:last-child {
     outline: 0.1em solid hsl(26, 100%, 55%);
 }
 .thumbnail:hover, .add-to-cart:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: pointer;
 }
 .icon-minus, .icon-plus:hover {
@@ -159,9 +187,6 @@ header span:last-child {
         max-width: 28rem;
         margin: 0 auto;
         box-shadow: 1px 1px 4px 1px hsl(0, 0%, 92%) inset;
-    }
-    .current-sneaker-preview {
-        height: clamp(18rem, 42vh, 20rem);
     }
 }
 
@@ -206,15 +231,20 @@ header span:last-child {
     main {
         flex-direction: row;
         margin-top: 1em;
+        height: 50vh;
     }
-    .sneaker-preview {
-        display: grid;
-        place-content: center;
+    .carousel {
+        display: flex;
+        flex-direction: column;
         width: 50%;
         padding: 1em;
     }
-    .current-sneaker-preview {
-        border-radius: 0.6rem;
+    .carousel__track--container {
+        height: 100%;
+        padding: 20em 0;
+    }
+    .carousel__image {
+        border-radius: 0.6em;
     }
     .thumbnails {
         display: flex;
@@ -301,6 +331,9 @@ header span:last-child {
     .desktop-nav a {
         font-size: 0.7rem;
     }
+    main {
+        height: 60vh;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -313,6 +346,9 @@ header span:last-child {
     .desktop-nav {
         margin-left: -22vw;
     }
+    main {
+        height: 65vh;
+    }
     .details {
         justify-content: center;
     }
@@ -321,6 +357,12 @@ header span:last-child {
 @media screen and (min-width: 1270px) {
     :root {
         font-size: 21px;
+    }
+    main {
+        height: 68vh;
+    }
+    .carousel__image {
+        /* width: 100%; */
     }
 }
 
@@ -334,7 +376,10 @@ header span:last-child {
     .desktop-nav {
         margin-left: -22vw;
     }
-    .sneaker-preview {
+    main {
+        height: 70vh;
+    }
+    .carousel {
         padding: 2em;
     }
 }
@@ -346,6 +391,12 @@ header span:last-child {
     .desktop-nav {
         margin-left: -20vw;
     }
+    main {
+        height: 70vh;
+    }
+    .carousel {
+        padding: 1.4em 2em;
+    }
 }
 
 @media screen and (min-width: 1550px) {
@@ -355,7 +406,10 @@ header span:last-child {
     .logo {
         width: 105%;
     }
-    .sneaker-preview {
+    main {
+        height: 78vh;
+    }
+    .carousel {
         padding: 1.4em 2em;
     }
 }
