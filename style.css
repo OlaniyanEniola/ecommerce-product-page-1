@@ -249,6 +249,10 @@ header span:last-child {
     .carousel__track--container {
         height: 100%;
         padding: 20em 0;
+        border-radius: 0.6em;
+    }
+    .carousel__track {
+        border-radius: 0.6em;
     }
     .carousel__image {
         border-radius: 0.6em;
