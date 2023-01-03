@@ -9,10 +9,11 @@ body {
     font-family: "kumbh Sans", sans-serif;
 }
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
     align-items: center;
-    height: 90vh;
+    grid-template-rows: 1.5fr 2fr;
 }
 header {
     padding: 4.5%;
@@ -195,6 +196,8 @@ header span:last-child {
         display: none;
     }
     body {
+        width: 100vw;
+        height: 80vh;
         padding-inline: 16vw;
     }
     header {
@@ -229,14 +232,18 @@ header span:last-child {
         width: 2rem;
     }
     main {
-        flex-direction: row;
-        margin-top: 1em;
-        height: 50vh;
+        width: 100%;
+        height: 28rem;
+        padding-block: 2em 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
     }
     .carousel {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         padding: 1em;
     }
     .carousel__track--container {
@@ -257,7 +264,7 @@ header span:last-child {
     }
     .details {
         padding-right: 2%;
-        width: 50%;
+        width: 100%;
         display: grid;
         justify-content: end;
     }
@@ -331,9 +338,6 @@ header span:last-child {
     .desktop-nav a {
         font-size: 0.7rem;
     }
-    main {
-        height: 60vh;
-    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -346,8 +350,12 @@ header span:last-child {
     .desktop-nav {
         margin-left: -22vw;
     }
+    .desktop-nav a:hover {
+        border-bottom: 0.25em solid hsl(26, 100%, 55%);
+        padding-bottom: 2.2em;
+    }    
     main {
-        height: 65vh;
+        padding-block: 2vmax 0.4vmax;
     }
     .details {
         justify-content: center;
@@ -357,12 +365,6 @@ header span:last-child {
 @media screen and (min-width: 1270px) {
     :root {
         font-size: 21px;
-    }
-    main {
-        height: 68vh;
-    }
-    .carousel__image {
-        /* width: 100%; */
     }
 }
 
@@ -376,12 +378,10 @@ header span:last-child {
     .desktop-nav {
         margin-left: -22vw;
     }
-    main {
-        height: 70vh;
-    }
-    .carousel {
-        padding: 2em;
-    }
+    .desktop-nav a:hover {
+        border-bottom: 0.25em solid hsl(26, 100%, 55%);
+        padding-bottom: 2em;
+    }    
 }
 
 @media screen and (min-width: 1450px) {
@@ -390,12 +390,6 @@ header span:last-child {
     }
     .desktop-nav {
         margin-left: -20vw;
-    }
-    main {
-        height: 70vh;
-    }
-    .carousel {
-        padding: 1.4em 2em;
     }
 }
 
@@ -406,11 +400,9 @@ header span:last-child {
     .logo {
         width: 105%;
     }
-    main {
-        height: 78vh;
-    }
-    .carousel {
-        padding: 1.4em 2em;
-    }
+    .desktop-nav a:hover {
+        border-bottom: 0.25em solid hsl(26, 100%, 55%);
+        padding-bottom: 2.1em;
+    }    
 }
 
