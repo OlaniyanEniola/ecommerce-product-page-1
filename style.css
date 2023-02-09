@@ -146,10 +146,11 @@ header span:last-child {
     color: hsl(0, 0%, 100%);
     font-weight: 700;
     padding: 5% 35%;
-    width: 105%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 .add-to-cart img {
     width: 14%;
@@ -320,6 +321,7 @@ header span:last-child {
         font-size: 0.7rem;
         font-weight: 700;
         padding: 5% 28%;
+        width: 105%;
         height: 100%;
         justify-content: space-between;
     }
